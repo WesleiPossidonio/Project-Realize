@@ -4,8 +4,8 @@ import { ContainerContact } from './styled'
 export const SectionContact = () => {
   return (
     <ContainerContact>
-      <TitleText>FAQS</TitleText>
-      <TextRegular>Tire sua dúvida</TextRegular>
+      <TitleText>Contact</TitleText>
+      <TextRegular>Entre em Contato conosco</TextRegular>
     </ContainerContact>
   )
 }

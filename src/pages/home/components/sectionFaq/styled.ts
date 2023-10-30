@@ -7,7 +7,7 @@ export const ContainerFaq = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
 
   background-color: ${({ theme }) => theme.colors['bg-home']};
