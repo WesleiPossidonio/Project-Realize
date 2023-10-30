@@ -2,6 +2,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { FileImage } from '@phosphor-icons/react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 import * as zod from 'zod'
 
 import { useDataCompany } from '../../../../contexts/companyContext'
@@ -51,6 +52,12 @@ export const FormRegister = () => {
   } = useForm<createLoginCompaniesFormInputs>({
     resolver: zodResolver(RegisterCompaniesFormSchema),
   })
+
+  const navigate = useNavigate()
+
+  const handleNavigateLogin = () => {
+    navigate('/login')
+  }
 
   const { handleRegiterCompanies } = useDataCompany()
 
@@ -142,7 +149,7 @@ export const FormRegister = () => {
       <Button type="submit">Entrar</Button>
 
       <p>
-        já possui conta? <span>Fazer login!</span>
+        já possui conta? <span onClick={handleNavigateLogin}>Fazer login!</span>
       </p>
     </Form>
   )

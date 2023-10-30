@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 import * as zod from 'zod'
 
 import { useDataCompany } from '../../../../contexts/companyContext'
@@ -35,6 +36,12 @@ export const FormLoginCompanies = () => {
     reset()
   }
 
+  const navigate = useNavigate()
+
+  const handleNavigateSigUp = () => {
+    navigate('/inscreva-se')
+  }
+
   return (
     <Form onSubmit={handleSubmit(handleLoginCompanies)}>
       <Input
@@ -53,7 +60,8 @@ export const FormLoginCompanies = () => {
       <Button type="submit">Entrar</Button>
 
       <p>
-        Novo Usuário? <span>Increva-se Agora!</span>
+        Novo Usuário?{' '}
+        <span onClick={handleNavigateSigUp}>Increva-se Agora!</span>
       </p>
     </Form>
   )
