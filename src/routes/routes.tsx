@@ -9,13 +9,12 @@ import { PrivateRoutes } from './PrivateRoutes'
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/Login" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
 
       <Route path="/" element={<PrivateRoutes />}>
         <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/adicionar-vaga" element={<CreateVacancy />} /> */}
       </Route>
     </Routes>
   )
