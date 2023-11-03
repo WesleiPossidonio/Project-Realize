@@ -138,7 +138,7 @@ export const DataCompanyProvider = ({ children }: DataCompanyContextProps) => {
         formData.append('path_img', path_img)
 
         await toast.promise(
-          api.post('coupon', formData, {
+          api.post('companies', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
